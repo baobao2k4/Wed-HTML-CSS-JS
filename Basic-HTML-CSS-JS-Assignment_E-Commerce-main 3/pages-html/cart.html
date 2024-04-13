@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href=""><img src="../assets/icons/BTEC.png" alt="" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a class="active" href="cart.html"><img src="../assets/icons/cart-shopping-solid.png" class="cart-icon" alt=""></a></li>
+                <li><a class="logout" href="../index.html">Logout</a></li>
+            </ul>   
+        </div>       
+    </section>
+
+    <section id="cart">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>ACTION</td>
+                    <td>IMAGE</td>
+                    <td>PRODUCT</td>
+                    <td>PRICE</td>
+                    <td>AMOUNT</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cart-product">
+                    <td class="remove-icon"><a href="#"><img src="../assets/icons/xmark-solid.svg" width="20px"
+                    height="20px" alt=""></a></td>
+                    <td><img src="../assets/products/vga1.webp" alt=""></td>
+                    <td>ASUS ROG Matrix GeForce RTX 4090.....</td>
+                    <td class="cart-product-price">4999,99$</td>
+                    <td><input class="cart-product-quantity" type="number" value="1"></td>
+                </tr>
+                <tr class="cart-product">
+                    <td class="remove-icon"><a href="#"><img src="../assets/icons/xmark-solid.svg" width="20px"
+                    height="20px" alt=""></a></td>
+                    <td><img src="../assets/products/vga2.webp" alt=""></td>
+                    <td>MSI GeForce RTX 4090 SUPRIM LIQUID....</td>
+                    <td class="cart-product-price">3999,99$</td>
+                    <td><input class="cart-product-quantity" type="number" value="1"></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="cart-add">
+        <div id="coupon">
+            <h3>Apply coupon</h3>
+            <div id="cupom-field">
+                <input type="text" placeholder="Enter your coupon">
+                <button class="botao">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Total</h3>
+            <table>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="total-amount"><strong>$8999.98</strong></td>
+                </tr>
+            </table>
+            <button class="botao" onclick="showQRCode()">Continue to payment</button>
+            <div id="qr-code" style="display: none;">
+                <!-- Hình ảnh mã QR sẽ được hiển thị ở đây -->
+                <img src="https://cand.com.vn/Files/Image/hientk/2020/04/17/4e2cb294-95c0-4af7-9ec7-812f475e562d.jpg" alt="QR Code">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Cart</title>
+                    <link rel="stylesheet" href="../assets/css/style.css">
+                    <style>
+                        #qr-code img {
+                            width: 150px;
+                            height: auto;
+                        }
+                    </style>
+                </head>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="ft-container"> <!--container-->
+            <img src="../assets/icons/BTEC.png" alt="" class="logofooter">
+        </div>       
+    </section>
+    
+    <script src="../assets/js/script.js"></script>
+    <script>
+        function showQRCode() {
+            const qrCode = document.getElementById('qr-code');
+            qrCode.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
